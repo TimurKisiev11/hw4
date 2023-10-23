@@ -5,8 +5,9 @@ def frequency(filename):
     word_frequency = {}  # словарь для хранения частоты слов
     with open(filename, 'r') as file:
         for line in file:
-            words = line.strip().split()  # разделяем строку на слова
+            words = line.lower().strip().split()  # разделяем строку на слова
             for word in words:
+                word = word.strip('.?,;:()[]\/'"")
                 word_frequency[word] = word_frequency.get(word, 0) + 1  # увеличиваем счетчик для каждого слова
     return word_frequency
 
