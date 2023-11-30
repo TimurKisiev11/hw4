@@ -29,7 +29,6 @@ def lines_to_add(lines):
 def generate_a_file(filename, lines):
     """Создает файл, и выводит в него сгенерированное стихотворение"""
     newly_generated_filename = filename.rstrip('.txt') + '_newly_generated.txt'
-    k = 3
     with open(newly_generated_filename, 'x', encoding='utf-8') as newly_generated_file:
         newly_generated_file.write(lines[0] + "\n" + lines[1] + "\n\n")  # в lines_lines_to_add первые 2 строки другие
         for j in lines_to_add(lines):
